@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAWW - About</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        @keyframes slideText {
+            0% {
+                transform: translate(-50%, -50%) translateX(-100vw);
+            }
+            100% {
+                transform: translate(-50%, -50%) translateX(100vw);
+            }
+        }
+
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .moving-text {
+            position: fixed;
+            color: rgba(0, 0, 0, 0.1);
+            font-size: 800px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            white-space: nowrap;
+            animation: slideText 240s linear infinite;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        body {
+            margin: 0;
+            padding: 20px 40px;
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.6;
+            color: #000000;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 400;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav a {
+            font-size: 18px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: 400;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .founder {
+            font-size: 16px;
+        }
+
+        .founder h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .founder h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .founder p {
+            margin-bottom: 20px;
+        }
+
+        .projects {
+            margin-top: 30px;
+        }
+
+        .projects h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .projects ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .projects li {
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="moving-text">AAWW AAWW AAWW AAWW AAWW AAWW AAWW AAWW AAWW AAWW</div>
+    </div>
+
+    <div class="header">
+        <a href="index.html" class="logo">AAWW 建築事務所</a>
+        <div class="nav">
+            <a href="works.html">Works</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="founders-grid">
+        <div class="founder">
+            <h2>Aaron Chan Hong Wan</h2>
+            <h3>Registered Architect (Hong Kong, RIBA), LEED Green Associate</h3>
+            <p>Aaron holds a Master of Architecture and a Bachelor of Arts in Architectural Studies from the University of Hong Kong. He is a registered architect with the Hong Kong Institute of Architects (HKIA) and the Architects Registration Board (ARB), as well as a Chartered Architect with the Royal Institute of British Architects (RIBA). His expertise spans architectural design, project execution, and consultant coordination.</p>
+            <p>Aaron has worked on a diverse range of projects across Hong Kong and Mainland China, specializing in mixed-use developments, hospitality, and public infrastructure.</p>
+            <div class="projects">
+                <h4>Selected Projects</h4>
+                <ul>
+                    <li>Hotel Development – Cheung Sha Wan, Hong Kong</li>
+                    <li>Lai Wan Market Redevelopment – Hong Kong</li>
+                    <li>Tung Chung Refuse Collection Point – Hong Kong</li>
+                    <li>Hangzhou Yuhang Cainiao Headquarters – Hangzhou, China</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="founder">
+            <h2>Alexander Yuen Tin Lap</h2>
+            <h3>Registered Architect (Hong Kong)</h3>
+            <p>Alexander graduated with a Master of Architecture from the University of Hong Kong and has extensive experience in large-scale commercial and mixed-use developments. With a background in both design and project management, he has led key architectural strategies from concept to construction.</p>
+            <p>His work includes major urban and retail projects in Hong Kong, Shenzhen, and the Greater Bay Area, with a focus on feasibility studies, spatial planning, and technical coordination.</p>
+            <div class="projects">
+                <h4>Selected Projects</h4>
+                <ul>
+                    <li>11SKIES Retail Development – Chek Lap Kok, Hong Kong</li>
+                    <li>Site 3 New Central Harbourfront – Hong Kong</li>
+                    <li>Great City Bay – Shenzhen, China</li>
+                    <li>Tai Hang Extension Block – Hong Kong</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="founder">
+            <h2>Wilson Fung</h2>
+            <h3>Registered Architect (Hong Kong)</h3>
+            <p>Wilson holds a Master of Science in Advanced Architectural Design from Columbia University and a Bachelor of Architecture from California College of the Arts. He is a registered architect with the Hong Kong Institute of Architects (HKIA) and has been recognized with multiple industry awards, including the Lowenfish Memorial Prize and the AIA COTE Top 10 for Students.</p>
+            <p>Wilson has experience in high-profile international projects, with expertise in master planning, high-density developments, and sustainable design. He has worked across Hong Kong, the United States, and Mainland China.</p>
+            <div class="projects">
+                <h4>Selected Projects</h4>
+                <ul>
+                    <li>Mixed-Use Development – Hong Kong</li>
+                    <li>Commercial Tower – Hong Kong</li>
+                    <li>High-Density Residential Project – Mainland China</li>
+                    <li>Sustainable Urban Design Initiative – United States</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

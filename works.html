@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAWW - Works</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px 40px;
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.6;
+            color: #000000;
+            background-color: #ffffff;
+            cursor: crosshair;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 400;
+            text-decoration: none;
+            color: #000000;
+            cursor: crosshair;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav a {
+            font-size: 18px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: 400;
+            cursor: crosshair;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .project {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background-color: #f5f5f5;
+        }
+
+        .project a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .project-image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #f5f5f5;
+            overflow: hidden;
+        }
+
+        .project img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            will-change: transform, opacity;
+        }
+
+        .project img.loaded {
+            opacity: 1;
+        }
+
+        .project .placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            transform: scale(1.1);
+            transition: opacity 0.3s ease;
+        }
+
+        .project img.loaded + .placeholder {
+            opacity: 0;
+        }
+
+        .project-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .project:hover .project-info {
+            opacity: 1;
+        }
+
+        .project:hover img.loaded {
+            transform: scale(1.05);
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .project-details {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="logo">AAWW 建築事務所</a>
+        <div class="nav">
+            <a href="works.html">Works</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div class="projects-grid">
+        <div class="project">
+            <a href="Farm Road 36/index.html">
+                <div class="project-image-container">
+                    <img src="optimized-images/Farm Road 36/DSCF0905.jpg" 
+                         alt="Farm Road 36"
+                         loading="lazy"
+                         onload="this.classList.add('loaded')">
+                    <div class="placeholder" style="background-image: url('optimized-images/Farm Road 36/placeholder_DSCF0905.jpg');"></div>
+                </div>
+                <div class="project-info">
+                    <div class="project-title">Farm Road 36</div>
+                    <div class="project-details">Residential Project</div>
+                </div>
+            </a>
+        </div>
+        <div class="project">
+            <a href="Hong Lok Yuen/index.html">
+                <div class="project-image-container">
+                    <img src="optimized-images/Hong Lok Yuen/Enscape_2021-06-28-18-53-31.png" 
+                         alt="Hong Lok Yuen"
+                         loading="lazy"
+                         onload="this.classList.add('loaded')">
+                    <div class="placeholder" style="background-image: url('optimized-images/Hong Lok Yuen/placeholder_Enscape_2021-06-28-18-53-31.png');"></div>
+                </div>
+                <div class="project-info">
+                    <div class="project-title">Hong Lok Yuen</div>
+                    <div class="project-details">Residential Development</div>
+                </div>
+            </a>
+        </div>
+        <div class="project">
+            <a href="Farm Road 47 D/index.html">
+                <div class="project-image-container">
+                    <img src="optimized-images/Farm Road 47 D/47D_Bedroom.jpg" 
+                         alt="Farm Road 47 D"
+                         loading="lazy"
+                         onload="this.classList.add('loaded')">
+                    <div class="placeholder" style="background-image: url('optimized-images/Farm Road 47 D/placeholder_47D_Bedroom.jpg');"></div>
+                </div>
+                <div class="project-info">
+                    <div class="project-title">Farm Road 47 D</div>
+                    <div class="project-details">Residential Project</div>
+                </div>
+            </a>
+        </div>
+        <div class="project">
+            <a href="Vietnam Showroom/index.html">
+                <div class="project-image-container">
+                    <img src="optimized-images/Vietnam Showroom/Exterior View 1.jpg" 
+                         alt="Vietnam Showroom"
+                         loading="lazy"
+                         onload="this.classList.add('loaded')">
+                    <div class="placeholder" style="background-image: url('optimized-images/Vietnam Showroom/placeholder_Exterior View 1.jpg');"></div>
+                </div>
+                <div class="project-info">
+                    <div class="project-title">Vietnam Showroom</div>
+                    <div class="project-details">Commercial Project</div>
+                </div>
+            </a>
+        </div>
+        <div class="project">
+            <a href="The Reach/index.html">
+                <div class="project-image-container">
+                    <img src="optimized-images/The Reach/Dining.jpg" 
+                         alt="The Reach"
+                         loading="lazy"
+                         onload="this.classList.add('loaded')">
+                    <div class="placeholder" style="background-image: url('optimized-images/The Reach/placeholder_Dining.jpg');"></div>
+                </div>
+                <div class="project-info">
+                    <div class="project-title">The Reach</div>
+                    <div class="project-details">Residential Development</div>
+                </div>
+            </a>
+        </div>
+        <div class="project">
+            <a href="Venice Biennale/index.html">
+                <div class="project-image-container">
+                    <img src="optimized-images/Venice Biennale/photos (1).jpg" 
+                         alt="Venice Biennale"
+                         loading="lazy"
+                         onload="this.classList.add('loaded')">
+                    <div class="placeholder" style="background-image: url('optimized-images/Venice Biennale/placeholder_photos (1).jpg');"></div>
+                </div>
+                <div class="project-info">
+                    <div class="project-title">Venice Biennale</div>
+                    <div class="project-details">Exhibition Project</div>
+                </div>
+            </a>
+        </div>
+        <div class="project">
+            <a href="Design Competition for Transformation of Sensory Garden at Kwun Tong Promenade/index.html">
+                <div class="project-image-container">
+                    <img src="optimized-images/Design Competition for Transformation of Sensory Garden at Kwun Tong Promenade/photos (2).jpg" 
+                         alt="Sensory Garden"
+                         loading="lazy"
+                         onload="this.classList.add('loaded')">
+                    <div class="placeholder" style="background-image: url('optimized-images/Design Competition for Transformation of Sensory Garden at Kwun Tong Promenade/placeholder_photos (2).jpg');"></div>
+                </div>
+                <div class="project-info">
+                    <div class="project-title">Sensory Garden</div>
+                    <div class="project-details">Kwun Tong Promenade Design Competition</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Add intersection observer for lazy loading
+        const images = document.querySelectorAll('.project img');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (!img.src.includes(img.getAttribute('data-src'))) {
+                        img.src = img.getAttribute('data-src');
+                    }
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+        });
+
+        images.forEach(img => {
+            if ('loading' in HTMLImageElement.prototype) {
+                // Browser supports native lazy loading
+                img.loading = 'lazy';
+            } else {
+                // Use intersection observer as fallback
+                const src = img.src;
+                img.src = '';
+                img.setAttribute('data-src', src);
+                imageObserver.observe(img);
+            }
+        });
+    </script>
+</body>
+</html> 
